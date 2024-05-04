@@ -1,11 +1,11 @@
 <H3>MOHAMED ROSHAN S</H3>
-<br>
+<hr>
 <H3>212222040101</H3>
-<br>
+<hr>
 <H3>EX. NO.6</H3>
-<br>
+<hr>
 <H3>DATE:</H3>
-<br>
+<hr>
 <H1 ALIGN =CENTER>Heart attack prediction using MLP</H1>
 <H3>Aim:</H3>  To construct a  Multi-Layer Perceptron to predict heart attack using Python
 <H3>Algorithm:</H3>
@@ -62,20 +62,19 @@ print(classification_rep)
 
 ```
 
-<H3>Output:</H3>
+<H2>Output:</H2>
 
-### ACCURACY
+## ACCURACY
 
 ![OUT](Screenshot%202024-05-04%20151003.png)
 
-### plot
-
+## PLOT
 ![OUT](Screenshot%202024-05-04%20151019.png)
 
-### REPORT AND MATRIX 
+## REPORT AND MATRIX 
 
 ![OUT](Screenshot%202024-05-04%20151025.png
 )
-<H3>Results:</H3>
-<BR>
+<H2>Results:</H2>
+<hR>
 Thus, an ANN with MLP is constructed and trained to predict the heart attack using python.
