@@ -1,7 +1,11 @@
-3>ENTER YOUR NAME</H3>
-<H3>ENTER YOUR REGISTER NO.</H3>
+<H3>MOHAMED ROSHAN S</H3>
+<br>
+<H3>212222040101</H3>
+<br>
 <H3>EX. NO.6</H3>
+<br>
 <H3>DATE:</H3>
+<br>
 <H1 ALIGN =CENTER>Heart attack prediction using MLP</H1>
 <H3>Aim:</H3>  To construct a  Multi-Layer Perceptron to predict heart attack using Python
 <H3>Algorithm:</H3>
@@ -17,11 +21,61 @@ Step 9:Evaluate the model's accuracy by comparing the predicted labels (y_pred) 
 Step 10:Print the accuracy of the model.<BR>
 Step 11:Plot the error convergence during training using plt.plot() and plt.show().<BR>
 <H3>Program: </H3>
-Insert your code here
+
+```
+MOHAMED ROSHAN S
+212222040101
+
+```
+```py
+
+import numpy as np
+import pandas as pd
+from sklearn.neural_network import MLPClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import accuracy_score,classification_report,confusion_matrix
+import matplotlib.pyplot as plt
+data = pd.read_csv('heart.csv')
+X = data.iloc[:, :-1].values
+y = data.iloc[:, -1].values
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+scaler = StandardScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
+mlp = MLPClassifier(hidden_layer_sizes=(100, 100), max_iter=1000, random_state=42)
+training_loss = mlp.fit(X_train, y_train).loss_curve_
+y_pred = mlp.predict(X_test)
+accuracy = accuracy_score(y_test, y_pred)
+print("Accuracy:", accuracy)
+plt.plot(training_loss)
+plt.title("MLP Training Loss Convergence")
+plt.xlabel("Iteration")
+plt.ylabel("Loss Values")
+plt.show()
+conf_matrix=confusion_matrix(y_test,y_pred)
+classification_rep=classification_report(y_test,y_pred)
+print("Confusion Matrix")
+print(conf_matrix)
+print("Classification Report")
+print(classification_rep)
+
+```
 
 <H3>Output:</H3>
 
-Show your results here
+### ACCURACY
 
+![OUT](Screenshot%202024-05-04%20151003.png)
+
+### plot
+
+![OUT](Screenshot%202024-05-04%20151019.png)
+
+### REPORT AND MATRIX 
+
+![OUT](Screenshot%202024-05-04%20151025.png
+)
 <H3>Results:</H3>
+<BR>
 Thus, an ANN with MLP is constructed and trained to predict the heart attack using python.
